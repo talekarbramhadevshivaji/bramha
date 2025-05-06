@@ -82,19 +82,22 @@
           </reportPlugins>
         </configuration>
       </plugin>
-    </plugins>
 
-    <pluginManagement>
-      <plugins>
         <plugin>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>2.8</version>
         </plugin>
 
         <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.12.1</version>
-        </plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.11.0</version>
+      <configuration>
+        <source>17</source>
+        <target>17</target>
+        <encoding>UTF-8</encoding>
+      </configuration>
+    </plugin>
 
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
@@ -159,7 +162,6 @@
           <version>8.0.0.M1</version>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 
   <dependencyManagement>
